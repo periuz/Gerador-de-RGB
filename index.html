@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de RGB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cor">
+        <span id="hexagon">#7b6ac9</span>
+        <button onclick="GerarCor()">GERAR NOVA COR</button>
+        <p id="nome">Por Thiago Perius</p>
+    </div>
+
+    <script type="text/javascript">
+
+        function GerarCor() {
+            var simbolo, cor;
+            simbolo = "0123456789ABCDEF";
+            cor = "#";
+
+            for (var i =0;i<6;i++)[
+                cor = cor + simbolo[Math.floor(Math.random() * 16)]
+            ]
+
+            document.body.style.background = cor;
+            document.getElementById("nome").style.color = cor;
+            document.getElementById("hexagon").innerHTML = cor;
+            
+                }
+
+    </script>
+</body>
+</html>
